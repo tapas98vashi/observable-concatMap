@@ -9,11 +9,11 @@ const getData = (param) => {
 }
 
 // using a regular map
-from([1,2,3,4]).pipe(
+from(['rivet','tapas','valsad','angular']).pipe(
   map(param => getData(param))
 ).subscribe(val => val.subscribe(data => console.log('map:', data)));
 
 // using concatMap
-from([1, 2, 3 ,4]).pipe(
+from(['rivet','tapas','valsad','angular']).pipe(
   concatMap(param => getData(param))
 ).subscribe(val => console.log('concatMap:', val));
